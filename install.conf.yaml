@@ -1,0 +1,27 @@
+- defaults:
+    link:
+        create: true
+        relink: true
+
+- clean: ['~', '~/.vim', '~/.vim/*']
+
+- link:
+    ~/.bashrc: bashrc
+    ~/build/dwm/src/dwm-6.1/config.h: dwm.config.h
+    ~/build/st/src/st-0.8.1/config.h: st.config.h
+    ~/.config/hub: hub
+    ~/.crawlrc: crawlrc
+    ~/.gitconfig: gitconfig
+    ~/.tern-config: tern-config
+
+    # Vim
+    ~/.vimrc: vim/vimrc
+    ~/.config/nvim/init.vim: vim/init.vim
+    ~/.vim/init.vim: vim/init.vim
+    ~/.vim/ftplugin: vim/ftplugin/
+    ~/.vim/snippets: vim/snippets/
+    ~/.vim/syntax: vim/syntax/
+    ~/.vim/vimrc.d: vim/vimrc.d/
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]

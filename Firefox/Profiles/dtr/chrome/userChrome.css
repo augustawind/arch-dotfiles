@@ -1,0 +1,15 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+/* Unread, unvisited tabs (opened in the background). These are the ones that
+ * can be selected using `gL`.
+ */
+.tabbrowser-tab[unread]:not([VimFx-visited]):not(#override) {
+    font-style: italic !important;
+}
+
+/* Unread but previously selected tabs (that have changed since last select).
+ *\/
+.tabbrowser-tab[unread][VimFx-visited]:not(#override) {
+	font-weight: bold !important;
+}
+/**/

@@ -1,0 +1,63 @@
+# ~/.crawlrc
+# http://crawl.akrasiac.org/docs/options_guide.txt
+
+
+# 3-a                                           Picking up and Dropping.
+# ----------------------------------------------------------------------
+
+autopickup = (/%?"!+\}X$
+autopickup_exceptions += <curare-tipped needle
+autopickup_exceptions += <mutation, <lignification
+autopickup_exceptions += >rune
+
+drop_filter += useless_item
+
+
+# 3-f                                             Travel and Exploration.
+# -----------------------------------------------------------------------
+
+auto_exclude += Sigmund, Grinder
+explore_delay = 0
+explore_stop += greedy_pickup_smart, greedy_visited_item_stack, artefacts
+explore_stop += runes
+explore_wall_bias = 3
+rest_wait_both = true
+
+runrest_stop_message += god:wrath finds you
+runrest_stop_message += Your transformation is almost over
+runrest_stop_message += You are starting to lose your buoyancy
+
+
+# 3-g                                               Command Enhancements.
+# -----------------------------------------------------------------------
+
+autofight_caught = true
+autofight_hunger_stop = 1
+autofight_stop = 80
+
+easy_confirm = none
+easy_eat_chunks = true
+travel_open_doors = false
+
+spell_slot ^= Blink:+b
+spell_slot ^= Deflect:+r
+
+
+# 3-h                                  Messages and Display Enhancements.
+# -----------------------------------------------------------------------
+
+hp_warning = 35
+mp_warning = 15
+
+
+# 3-j                                                            Missles. 
+# -----------------------------------------------------------------------
+
+fire_order = launcher, return, tomahawk, javelin / rock, stone
+
+
+# 3-m                                              Macro related Options. 
+# -----------------------------------------------------------------------
+
+macros += M p af
+

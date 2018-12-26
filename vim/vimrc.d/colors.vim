@@ -1,0 +1,8 @@
+Plug 'arcticicestudio/nord-vim'
+Plug 'morhetz/gruvbox'
+Plug 'endel/vim-github-colorscheme'
+Plug 'fmoralesc/molokayo'
+Plug 'freeo/vim-kalisi'
+Plug 'rakr/vim-one'
+Plug 'romainl/flattened'
+Plug 'dracula/vim'
