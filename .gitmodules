@@ -2,3 +2,6 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 
+[submodule "bashrc.d/git-aware-prompt"]
+	path = bashrc.d/git-aware-prompt
+	url = https://github.com/jimeh/git-aware-prompt
