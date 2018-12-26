@@ -6,16 +6,21 @@
 - clean: ['~', '~/.vim', '~/.vim/*']
 
 - link:
+    # bash
     ~/.bashrc: bashrc
-    ~/build/dwm/src/dwm-6.1/config.h: dwm.config.h
-    ~/build/st/src/st-0.8.1/config.h: st.config.h
-    ~/.config/hub: hub
-    ~/.crawlrc: crawlrc
-    ~/.gitconfig: gitconfig
-    ~/.tern-config: tern-config
-    ~/.xinitrc: xinitrc
+    ~/.bash_profile: bash_profile
 
-    # Vim
+    # git
+    ~/.gitconfig: gitconfig
+    ~/.config/hub: hub
+
+    # xorg
+    ~/.xbindkeysrc: xbindkeysrc
+    ~/.xinitrc: xinitrc
+    ~/.Xdefaults: Xdefaults
+    ~/.Xmodmap: Xmodmap
+
+    # vim
     ~/.vimrc: vim/vimrc
     ~/.config/nvim/init.vim: vim/init.vim
     ~/.vim/init.vim: vim/init.vim
@@ -23,6 +28,12 @@
     ~/.vim/snippets: vim/snippets/
     ~/.vim/syntax: vim/syntax/
     ~/.vim/vimrc.d: vim/vimrc.d/
+
+    # misc
+    ~/build/dwm/src/dwm-6.1/config.h: dwm.config.h
+    ~/build/st/src/st-0.8.1/config.h: st.config.h
+    ~/.crawlrc: crawlrc
+    ~/.tern-config: tern-config
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

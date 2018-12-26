@@ -1,0 +1,14 @@
+!
+! ~/.Xdefaults
+!
+
+! urxvt -----------------------------------------------------------------------
+URxvt.geometry: 80x24
+URxvt.font: xft:terminus:size=12:antialias=false
+URxvt.letterSpace: -3
+URxvt.background: black
+URxvt.foreground: white
+URxvt.scrollBar: off
+URxvt.saveLines: 512
+
+URxvt.perl-ext-common: clipboard
