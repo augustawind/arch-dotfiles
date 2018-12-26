@@ -42,8 +42,12 @@ setxkbmap \
 # start window manager & other programs
 
 xbindkeys
+
 xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
+
+dwmstatus 2>&1 >/dev/null &
+
 while true; do /usr/bin/dwm > /dev/null; done;
 
 #& xclock -geometry 50x50-1+1
