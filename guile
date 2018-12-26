@@ -1,4 +1,0 @@
-(use-modules (ice-9 readline))
-(activate-readline)
-(use-modules (nala colorized))
-(activate-colorized)
