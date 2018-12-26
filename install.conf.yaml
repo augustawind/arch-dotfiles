@@ -18,7 +18,6 @@
     ~/.xbindkeysrc: xbindkeysrc
     ~/.xinitrc: xinitrc
     ~/.Xdefaults: Xdefaults
-    ~/.Xmodmap: Xmodmap
 
     # vim
     ~/.vimrc: vim/vimrc
