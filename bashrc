@@ -21,9 +21,13 @@ export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
 # imports --------------------------------------------------------------------
 
-#source ~/.bash/git-completion.bash
-#export GITAWAREPROMPT=~/.bash/git-aware-prompt
-#source "${GITAWAREPROMPT}/main.sh"
+for filename in /$HOME/.bashrc.d/*.{bash,sh}; do
+    [ -e $filename ] || continue
+    source $filename
+done
+
+export GITAWAREPROMPT=$HOME/.bashrc.d/git-aware-prompt
+source "${GITAWAREPROMPT}/main.sh"
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 eval "$(stack --bash-completion-script stack)"
