@@ -1,14 +1,22 @@
 - defaults:
     link:
-        create: true
-        relink: true
+      create: true
+      relink: true
 
 - clean: ['~', '~/.vim', '~/.vim/*']
 
 - link:
     # bash
     ~/.bashrc: bashrc
+    ~/.bashrc.d/:
+      path: bashrc.d/*
+      glob: true
     ~/.bash_profile: bash_profile
+
+    # builds
+    ~/build/:
+      path: build/*
+      glob: true
 
     # git
     ~/.gitconfig: gitconfig
@@ -29,8 +37,7 @@
     ~/.vim/vimrc.d: vim/vimrc.d/
 
     # misc
-    ~/build/dwm/src/dwm-6.1/config.h: dwm.config.h
-    ~/build/st/src/st-0.8.1/config.h: st.config.h
+    ~/bin: bin
     ~/.crawlrc: crawlrc
     ~/.tern-config: tern-config
 
