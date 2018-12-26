@@ -21,6 +21,8 @@ export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
 # imports --------------------------------------------------------------------
 
+source /usr/share/bash-completion/bash_completion
+
 for filename in /$HOME/.bashrc.d/*.{bash,sh}; do
     [ -e $filename ] || continue
     source $filename

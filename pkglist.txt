@@ -3,6 +3,7 @@ alsa-utils
 autoconf
 automake
 bash
+bash-completion
 binutils
 bison
 bzip2
@@ -37,6 +38,7 @@ icedtea-web
 inetutils
 iproute2
 iputils
+ipython
 iw
 jfsutils
 less
