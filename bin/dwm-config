@@ -1,0 +1,5 @@
+#!/bin/sh
+cd $HOME/build/dwm/
+$EDITOR config.h
+updpkgsums
+makepkg --install --force --noconfirm
