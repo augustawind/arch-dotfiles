@@ -13,6 +13,7 @@
     ~/.crawlrc: crawlrc
     ~/.gitconfig: gitconfig
     ~/.tern-config: tern-config
+    ~/.xinitrc: xinitrc
 
     # Vim
     ~/.vimrc: vim/vimrc
