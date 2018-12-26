@@ -6,17 +6,23 @@
 - clean: ['~', '~/.vim', '~/.vim/*']
 
 - link:
+    # scripts
+    ~/bin/:
+      path: bin/*
+      glob: true
+
     # bash
+    ~/.bash_profile: bash_profile
     ~/.bashrc: bashrc
     ~/.bashrc.d/:
       path: bashrc.d/*
       glob: true
-    ~/.bash_profile: bash_profile
 
     # builds
     ~/build/:
-      path: build/*
+      path: build/**/*
       glob: true
+      force: true
 
     # git
     ~/.gitconfig: gitconfig
@@ -37,7 +43,6 @@
     ~/.vim/vimrc.d: vim/vimrc.d/
 
     # misc
-    ~/bin: bin
     ~/.crawlrc: crawlrc
     ~/.tern-config: tern-config
 
