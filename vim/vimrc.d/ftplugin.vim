@@ -60,6 +60,11 @@ Plug 'zchee/deoplete-jedi'
 Plug 'alexgenco/neovim-ruby'
 
 " ------------------------------------------------
+" scheme
+
+Plug 'wlangstroth/vim-racket'
+
+" ------------------------------------------------
 " ruby
 
 Plug 'fishbullet/deoplete-ruby'
