@@ -5,11 +5,6 @@
 # check for an interactive session
 [ -z "$PS1" ] && return
 
-# PATH -----------------------------------------------------------------------
-
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$HOME/bin:$PATH"
-
 # environment variables ------------------------------------------------------
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:/usr/local/opt/findutils/share/man:$MANPATH"
 export LANG="en_US.UTF-8"
@@ -18,6 +13,12 @@ export SUDO_EDITOR="$EDITOR"
 export GOPATH=$HOME/work
 export LESS='-R'
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+
+# PATH -----------------------------------------------------------------------
+
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
+export PATH="$GOPATH/bin:$PATH"
 
 # imports --------------------------------------------------------------------
 
@@ -32,7 +33,8 @@ export GITAWAREPROMPT=$HOME/.bashrc.d/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-eval "$(stack --bash-completion-script stack)"
+# haskell stack bash completion
+#eval "$(stack --bash-completion-script stack)" &
 
 # prompt --------------------------------------------------------------------- 
 export PS1="\[\033[35m\]λ\[\e[0m\] \W\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\] -> "
@@ -49,6 +51,7 @@ alias ll='ls -laF'
 alias la='ls -a'
 alias vim='nvim'
 alias python='python3'
+alias pingarch='while true; do ping www.archlinux.org && sleep 1; done'
 
 # safety
 alias cp='cp -i'
@@ -60,7 +63,7 @@ alias ln='ln -i'
 alias git='hub'
 alias gs='git status'
 alias gd='git diff'
-alias gl='git ll'
+alias gl='git log --stat'
 alias ga='git add'
 alias gap='git add -p'
 alias gc='git commit'
@@ -132,7 +135,7 @@ export NVM_DIR="/Users/dtr/.nvm"
 
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/bin/virtualenvwrapper.sh
+source /usr/bin/virtualenvwrapper.sh &
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 
 # docker ---------------------------------------------------------------------
