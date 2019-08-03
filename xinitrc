@@ -46,6 +46,9 @@ xbindkeys
 xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
 
+autocutsel -fork &
+autocutsel -selection PRIMARY -fork &
+
 dwmstatus 2>&1 >/dev/null &
 
 while true; do /usr/bin/dwm > /dev/null; done;
