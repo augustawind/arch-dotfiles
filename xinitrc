@@ -46,6 +46,7 @@ xbindkeys
 xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
 
+# autosync clipboards
 autocutsel -fork &
 autocutsel -selection PRIMARY -fork &
 
